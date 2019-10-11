@@ -1,6 +1,6 @@
 # Docker Wordpress
 
-If docker, docker-compose not exist, then install at section [Installation Docker](#Installation%Docker)
+If docker, docker-compose not exist, then install at section [Installation Docker](#install-docker)
 
 ## Run Wordpress
 
@@ -20,13 +20,13 @@ docker-compose up --build -d
 docker logs <containerid> # logs
 ```
 
-Then in your browser listen port 8000, edit port it up to you:
+Then in your browser listen port 8000, edit port it up to you in *docker-compose.yml*:
 
 ```bash
 http://localhost:8000/
 ```
 
-## Installation Docker
+## Install Docker
 
 ```bash
 # Docker
@@ -48,7 +48,7 @@ $ sudo docker run hello-world
 $ sudo docker --version
 ```
 
-## Installation Docker Compose
+## Install Docker Compose
 
 ```bash
 # Docker-compose
