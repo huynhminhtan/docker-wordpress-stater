@@ -26,6 +26,25 @@ Then in your browser listen port 8000, edit port it up to you in *docker-compose
 http://localhost:8000/
 ```
 
+## Fix error not access folder *plugin/theme*
+
+`To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.`
+
+Fixed.
+
+Access terminal container wordpress at */var/www/html*.
+
+```bash
+docker ps
+docker exec -it <image-id-wordpress-container> /bin/bash
+```
+
+Chown everything.
+
+```bash
+chown -R www-data:www-data *
+```
+
 ## Install Docker
 
 ```bash
