@@ -26,6 +26,11 @@ Then in your browser listen port 8000, edit port it up to you in *docker-compose
 http://localhost:8000/
 ```
 
+## Opion
+
+By default, anonymous volumes attached to containers are not removed. You can override this with -v. To list all volumes, use `docker volume ls`, then `docker volume rm <name-volume>`.
+
+
 ## Fix error not access folder *plugin/theme*
 
 Error code: `To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.`
