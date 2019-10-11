@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  dbmysql:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassdb
+      MYSQL_DATABASE: namedb
+      MYSQL_USER: userdb
+      MYSQL_PASSWORD: passdb123
+
+  wordpress:
+    depends_on:
+      - dbmysql
+    image: wordpress:5.1.1-php7.3-apache
+    ports:
+      - "8000:80"   # ánh xạ <port máy thật> : <port container>, để truy cập localhost:5000
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: dbmysql:3306
+      WORDPRESS_DB_NAME: namedb
+      WORDPRESS_DB_USER: userdb
+      WORDPRESS_DB_PASSWORD: passdb123
+    working_dir: /var/www/html
+    volumes:
+      - ./wordpress-data:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+volumes:
+  db_data:
