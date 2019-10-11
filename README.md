@@ -28,15 +28,13 @@ http://localhost:8000/
 
 ## Fix error not access folder *plugin/theme*
 
-`To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.`
-
-Fixed.
+Error code: `To perform the requested action, WordPress needs to access your web server. Please enter your FTP credentials to proceed. If you do not remember your credentials, you should contact your web host.`
 
 Access terminal container wordpress at */var/www/html*.
 
 ```bash
 docker ps
-docker exec -it <image-id-wordpress-container> /bin/bash
+docker exec -it <wordpress-container-id> /bin/bash
 ```
 
 Chown everything.
