@@ -8,7 +8,7 @@ Clone project docker compose.
 
 ```bash
 git clone https://github.com/huynhminhtan/docker-wordpress-stater.git
-cd docker-wordpress-starter
+cd docker-wordpress-stater
 ````
 
 Then build and run.
