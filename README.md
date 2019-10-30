@@ -26,7 +26,7 @@ Then in your browser listen port 8000, edit port it up to you in *docker-compose
 http://localhost:8000/
 ```
 
-## Opion
+## Option
 
 By default, anonymous volumes attached to containers are not removed. You can override this with -v. To list all volumes, use `docker volume ls`, then `docker volume rm <name-volume>`.
 
