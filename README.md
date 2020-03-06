@@ -24,6 +24,8 @@ Then in your browser listen port 8000, edit port it up to you in *docker-compose
 
 ```bash
 http://localhost:8000/
+http://localhost:8000/wp-admin
+User: admin/123456
 ```
 
 ## Option
